@@ -1,12 +1,14 @@
-import globalStyles from "./style/globalStyles";
+import Header from './components/layouts/Header';
+import globalStyles from './styles/globalStyles';
 import { Global } from '@emotion/react';
 
 const App = () => (
   <>
     <Global styles={globalStyles} />
     <div>
-      <h1>안녕하세요! abcd</h1>
-      <p>나눔바른고딕 폰트 abcdefg</p>
+      <Header />
+      <h1>안녕하세요!</h1>
+      <p>나눔바른고딕 폰트 ag</p>
     </div>
   </>
 );
