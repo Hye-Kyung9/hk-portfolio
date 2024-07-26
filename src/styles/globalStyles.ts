@@ -5,6 +5,9 @@ const globalStyles = css`
 
   body {
     font-family: 'Nanum Barun Gothic', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
   }
 `;
 
