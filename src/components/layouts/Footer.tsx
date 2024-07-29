@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
   text-align: center;
   background-color: #151515;
   color: #999;
-  opacity: 0.7;
+  opacity: 0.75;
   font-size: 12px;
 `;
 
