@@ -10,21 +10,27 @@ import Header from './components/layouts/Header';
 const appStyles = css`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+`;
+
+const contentStyles = css`
+  flex: 1;
 `;
 
 const App = () => (
   <>
     <Global styles={globalStyles} />
     <BrowserRouter>
-      <Header />
       <div css={appStyles}>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/projects" element={<ProjectList />} />
-        </Routes>
+        <Header />
+        <main css={contentStyles}>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/projects" element={<ProjectList />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   </>
 );
