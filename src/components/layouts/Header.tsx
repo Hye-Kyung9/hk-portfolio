@@ -20,9 +20,10 @@ const StyledLink = styled(Link)`
   color: #111;
   padding: 0 10px;
   text-decoration: none;
+  transition: 0.3s ease; /* 트랜지션 추가 */
 
   &:hover {
-    color: #007bff; /* 호버 상태에서 색상 변경 */
+    color: #007bff;
   }
 `;
 
@@ -32,7 +33,7 @@ export default function Header() {
       <Logo src={logo} onClick={() => alert('home!')} alt="logo" />
       <div>
         <StyledLink to="/">HOME</StyledLink>
-        <StyledLink to="/project">PROJECT</StyledLink>
+        <StyledLink to="/projects">PROJECT</StyledLink>
         <StyledLink to="/">BLOG</StyledLink>
       </div>
     </Container>
