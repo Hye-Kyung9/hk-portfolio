@@ -26,26 +26,30 @@ const Nav = styled.nav<{ isOpen: boolean }>`
   @media (max-width: 768px) {
     display: ${(props) => (props.isOpen ? 'flex' : 'none')};
     flex-direction: column;
-    position: absolute;
-    top: 80px;
+    position: fixed; /* 화면 전체를 차지하도록 수정 */
+    top: 78px; /* Header 높이만큼 내려줌 */
     left: 0;
     width: 100%;
+    height: calc(100% - 78px);
     background-color: white;
-    /* border-top: 1px solid #111; */
+    justify-content: center;
+    align-items: center;
+    font-size: ${(props) => props.isOpen && '22px'};
+    background-color: aliceblue;
+    padding-bottom: 55px;
+    z-index: 1;
+    line-height: 2;
   }
 `;
 
 const StyledLink = styled(Link)`
   color: #111;
-  padding: 0 10px;
+  padding: 10px;
   text-decoration: none;
   transition: 0.3s ease;
+
   &:hover {
     color: #007bff;
-  }
-
-  @media (max-width: 768px) {
-    padding: 15px 0;
   }
 `;
 
