@@ -6,7 +6,15 @@ const globalStyles = css`
   *::before,
   *::after {
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
+
   body {
     font-family: 'Nanum Barun Gothic', sans-serif;
     padding: 0;
