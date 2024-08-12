@@ -36,6 +36,9 @@ const Nav = styled.nav<{ isOpen: boolean }>`
     align-items: center;
     font-size: ${(props) => props.isOpen && '22px'};
     background-color: aliceblue;
+    -webkit-transition: background-color 2s;
+    transition: background-color 2s;
+
     padding-bottom: 55px;
     z-index: 1;
     line-height: 2;
@@ -85,7 +88,6 @@ const ToggleButton = styled.button`
     opacity: 0;
     transform: scale(0.5);
   }
-
   &.open .menu-icon {
     opacity: 0;
     transform: scale(0.5);
