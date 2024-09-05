@@ -1,21 +1,24 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
-import { useEffect, useRef, useState } from 'react';
+import bgVideo from '../assets/images/background/bg-blue.mp4';
+import bgImage from '../assets/images/background/bg-snow.jpg';
 
 const Container = styled.div`
   height: 80vh;
-  background-color: #f0f0f0; /* Set your desired background color */
+  background-image: url(${bgImage});
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Stack the title and description vertically */
+  flex-direction: column;
 `;
 
 const Title = styled.h1`
   text-align: center;
   line-height: 1.6;
   font-size: 40px;
-  margin-bottom: 20px; /* Space between title and description */
+  margin-bottom: 20px;
 `;
 
 const Description = styled.div`
@@ -25,31 +28,13 @@ const Description = styled.div`
 `;
 
 const Main = () => {
-  const [word, setWord] = useState('');
-  let sentence = '안녕하세요! .';
-  const currentIndex = useRef(0);
-
-  // useEffect(() => {
-  //   const timerId = setInterval(() => {
-  //     setWord((state) => {
-  //       const newState = (state += sentence[currentIndex.current]);
-  //       currentIndex.current += 1;
-  //       return newState;
-  //     });
-  //   }, 100);
-
-  //   return () => clearTimeout(timerId);
-  // }, [sentence]);
-
   return (
     <>
+      <video autoPlay loop muted>
+        <source src={bgVideo} type="video/mp4" />
+      </video>
       <Container>
-        <Title>
-          {word}
-          안녕하세요!
-          <br />
-          프론트엔드 개발자 구혜경입니다.
-        </Title>
+        <Title>KOO HYE KYUNG</Title>
       </Container>
       <Description>👉 WORKED FOR...</Description>
     </>

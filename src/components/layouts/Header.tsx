@@ -50,6 +50,7 @@ const StyledLink = styled(Link)`
   padding: 10px;
   text-decoration: none;
   transition: 0.3s ease;
+  font-weight: 400;
 
   &:hover {
     color: #007bff;
@@ -99,6 +100,23 @@ const ToggleButton = styled.button`
   }
 `;
 
+const Text3D = styled.span`
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff; /* 원본 글자 색상 */
+  background-color: rgb(200, 75, 49);
+
+  &::after {
+    content: 'HYE KYUNG'; /* 동일한 텍스트 */
+    position: absolute;
+    top: -5px; /* Y축 이동 */
+    left: -5px; /* X축 이동 */
+    color: #000000; /* 그림자 색상 */
+  }
+`;
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -108,7 +126,8 @@ export default function Header() {
 
   return (
     <Container>
-      <Logo src={logo} onClick={() => alert('home!')} alt="logo" />
+      {/* <Logo src={logo} onClick={() => alert('home!')} alt="logo" /> */}
+      <Text3D>HYE KYUNG</Text3D>
       <ToggleButton onClick={toggleMenu} className={isOpen ? 'open' : ''}>
         <img src={menuIcon} alt="menu icon" className="menu-icon" />
         <img src={closeIcon} alt="close icon" className="close-icon" />
