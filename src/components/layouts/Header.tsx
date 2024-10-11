@@ -105,15 +105,19 @@ const Text3D = styled.span`
   display: inline-block;
   font-size: 50px;
   font-weight: 700;
-  color: #ffffff; /* 원본 글자 색상 */
+  color: #fff;
   background-color: rgb(200, 75, 49);
+  padding: 5px 7px 0 10px;
+  border-radius: 2px;
+  cursor: pointer;
 
   &::after {
-    content: 'HYE KYUNG'; /* 동일한 텍스트 */
+    content: 'HYE KYUNG';
     position: absolute;
-    top: -5px; /* Y축 이동 */
-    left: -5px; /* X축 이동 */
-    color: #000000; /* 그림자 색상 */
+    top: -5px;
+    left: -5px;
+    color: #000000;
+    padding: 5px 7px 0 10px;
   }
 `;
 

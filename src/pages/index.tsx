@@ -1,11 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
-import bgVideo from '../assets/images/background/bg-blue.mp4';
-import bgImage from '../assets/images/background/bg-snow.jpg';
 
 const Container = styled.div`
   height: 80vh;
-  background-image: url(${bgImage});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -30,9 +27,9 @@ const Description = styled.div`
 const Main = () => {
   return (
     <>
-      <video autoPlay loop muted>
+      {/* <video autoPlay loop muted>
         <source src={bgVideo} type="video/mp4" />
-      </video>
+      </video> */}
       <Container>
         <Title>KOO HYE KYUNG</Title>
       </Container>
